@@ -2,7 +2,14 @@
 
 import * as React from 'react'
 // FIXME(wwayne): Review each icons and consider re-export from `lucide-react`.
-import { BookOpenText, ChevronsDownUp, GitFork, Mail, Star } from 'lucide-react'
+import {
+  BookOpenText,
+  ChevronsDownUp,
+  GitFork,
+  Mail,
+  Star,
+  Tag
+} from 'lucide-react'
 
 import { cn } from '@/lib/utils'
 
@@ -1450,6 +1457,10 @@ function IconJetBrains({ className, ...props }: React.ComponentProps<'svg'>) {
   )
 }
 
+const IconTag = ({ className, ...props }: React.ComponentProps<typeof Tag>) => (
+  <Tag className={cn('h4 w-4', className)} {...props} />
+)
+
 export {
   IconEdit,
   IconNextChat,
@@ -1525,5 +1536,6 @@ export {
   IconStar,
   IconGitFork,
   IconVSCode,
-  IconJetBrains
+  IconJetBrains,
+  IconTag
 }
